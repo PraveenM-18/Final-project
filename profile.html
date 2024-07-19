@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <h2>User Profile</h2>
+    <div id="profileDetails">
+        <!-- Display user details here -->
+    </div>
+
+    <script>
+        // Retrieve saved email from local storage (for demonstration purposes)
+        var loggedInEmail = localStorage.getItem("loggedInEmail");
+
+        // Display user details on the profile page
+        var profileDetails = document.getElementById("profileDetails");
+        if (loggedInEmail) {
+            profileDetails.innerHTML = "<p>Welcome, " + loggedInEmail + "!</p>";
+        } else {
+            profileDetails.innerHTML = "<p>User details not found.</p>";
+        }
+    </script>
+</body>
+</html>
